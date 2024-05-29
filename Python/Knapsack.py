@@ -76,7 +76,7 @@ def algoritm_knapsack(homari, nr_homari, capacitate_maxima):
     print("=== Homari selectati : ")
     for iterator in range(nr_homari, 0, -1): #se afiseaza homarii selectati in plasa
         if primeste_valoare_matrice(matrice, iterator, dimensiune) != primeste_valoare_matrice(matrice, iterator - 1, dimensiune):
-            print(homari[iterator].id, end=" ")
+            print(homari[iterator-1].id, end=" ")
             dimensiune -= homari[iterator - 1].dimensiune
 
     print(f"\n=== Valoare in plasa {valoare_knapsack} ===")
