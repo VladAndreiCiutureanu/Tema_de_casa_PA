@@ -28,7 +28,7 @@ def generare_homari(nr_homari):
     random.seed(time.time())
     homari = []
     for iterator in range(1, nr_homari + 1):
-        homar = Homar(iterator, random.randint(1, 20), random.randint(1, 20))#se creeaza un nou element cu date pseudo-aleatorii cu ajutorul clasei definite anterior
+        homar = Homar(iterator, random.randint(1, 30), random.randint(1, 30))#se creeaza un nou element cu date pseudo-aleatorii cu ajutorul clasei definite anterior
         homari.append(homar)#se adauga la vectorul homari noul element creat anterior
     return homari
 
