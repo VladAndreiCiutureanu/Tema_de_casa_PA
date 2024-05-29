@@ -62,7 +62,7 @@ def algoritm_knapsack(homari, nr_homari, capacitate_maxima):
         for iterator_dimensiune in range(1, matrice.nr_coloane):
             valoare_fara_obiect = primeste_valoare_matrice(matrice, iterator_valoare - 1, iterator_dimensiune)#valoarea din matrice calculata pentru iterator_valoare - 1 homari si dimensiunea curenta
             if homari[iterator_valoare - 1].dimensiune <= iterator_dimensiune:
-                capacitate_ramasa = iterator_dimensiune - homari[iterator_valoare].dimensiune#capacitatea ramasa in plasa daca este adaugat homarul curent
+                capacitate_ramasa = iterator_dimensiune - homari[iterator_valoare-1].dimensiune#capacitatea ramasa in plasa daca este adaugat homarul curent
                 valoare_capacitate_ramasa_fara_obiect = primeste_valoare_matrice(matrice, iterator_valoare - 1, capacitate_ramasa)#valoarea din matrice calculata pentru iterator_valoare -1 homari si capacitatea ramasa din plasa
                 valoare_cu_obiect = homari[iterator_valoare - 1].valoare + valoare_capacitate_ramasa_fara_obiect#valoarea din matrice in cazul in care homarul curent este adaugat in plasa
                 valoare_maxima = maximum(valoare_cu_obiect, valoare_fara_obiect)
